@@ -1,0 +1,7 @@
+target/
+.idea/
+*.class
+*.log
+node_modules/
+playwright-report/
+test-output/
