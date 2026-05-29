@@ -1,14 +1,18 @@
-package com.playwright.learning.base;
+package com.playwright.learning.tests;
+
+import org.testng.annotations.Test;
 
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Playwright;
 import com.microsoft.playwright.Page;
+import com.playwright.learning.pages.LoginPage;
 import com.playwright.learning.utils.ConfigReader;
 
 
-public class playwright_Test {
-    public static void main(String[] args) {
+public class LoginToORangeHRM {
+    @Test
+    public void browserLaunchTest() {
    
 
     Playwright pw;
@@ -21,6 +25,9 @@ public class playwright_Test {
         page = browser.newPage();
         page.navigate(ConfigReader.getUrl());
 
+           LoginPage loginpage=new LoginPage(page);
+           loginpage.loginToOrangeHrm(ConfigReader.getUsername(), ConfigReader.getPassword());
+        
         page.close();
         browser.close();    
 
@@ -28,3 +35,6 @@ public class playwright_Test {
 
                   
 }
+
+
+

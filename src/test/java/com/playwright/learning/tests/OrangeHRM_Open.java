@@ -3,7 +3,7 @@ import com.playwright.learning.base.BaseTest;
 import com.playwright.learning.pages.LoginPage;
 
 import org.testng.annotations.Test;
-public class LoginTest extends BaseTest {
+public class OrangeHRM_Open extends BaseTest {
 
     @Test
     public void openOrangeHRM(){

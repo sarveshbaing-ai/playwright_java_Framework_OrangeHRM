@@ -1,6 +1,7 @@
 package com.playwright.learning.pages;
 
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.AriaRole;
 import com.microsoft.playwright.Locator;
 
 public class LoginPage {
@@ -15,9 +16,9 @@ public class LoginPage {
 
         this.page = page;
 
-        username = page.locator("//input[@name='username']");
-        password = page.locator("//input[@name='password']");
-        login = page.locator("//button[contains(.,'Login')]");
+        username=page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Username"));
+        password=page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Password"));
+        login=page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Login"));
         resetPwd= page.locator("//p[contains(.,'Forgot your password?')]");
     }
 
@@ -39,3 +40,6 @@ public class LoginPage {
         
     }
 }
+
+
+        

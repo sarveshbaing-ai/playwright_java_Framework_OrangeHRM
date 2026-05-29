@@ -8,7 +8,7 @@ public class DashboardPage {
     private Page page;
 
     // ── Header ───────────────────────────────────────────────────────────────
-    private Locator userDropdown;
+   // private Locator userDropdown;
 
     // ── Side Navigation ──────────────────────────────────────────────────────
     private Locator navAdmin;
@@ -37,7 +37,7 @@ public class DashboardPage {
         this.page = page;
 
         // Header — user dropdown uses class oxd-userdropdown-tab
-        userDropdown = page.locator("//span[contains(@class,'oxd-userdropdown-tab')]");
+        // userDropdown = page.locator("//span[contains(@class,'oxd-userdropdown-tab')]");
 
         // Side nav — all nav links use class "oxd-main-menu-item"
         navAdmin       = page.locator("//a[contains(@class,'oxd-main-menu-item') and normalize-space()='Admin']");
